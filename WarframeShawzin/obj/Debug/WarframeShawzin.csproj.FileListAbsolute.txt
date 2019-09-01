@@ -1,0 +1,10 @@
+F:\三弦琴\WarframeShawzin\WarframeShawzin\bin\Debug\WarframeShawzin.exe.config
+F:\三弦琴\WarframeShawzin\WarframeShawzin\bin\Debug\WarframeShawzin.exe
+F:\三弦琴\WarframeShawzin\WarframeShawzin\bin\Debug\WarframeShawzin.pdb
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.csprojAssemblyReference.cache
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.Properties.Resources.resources
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.warframeShawzin.resources
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.csproj.GenerateResource.cache
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.csproj.CoreCompileInputs.cache
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.exe
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.pdb
