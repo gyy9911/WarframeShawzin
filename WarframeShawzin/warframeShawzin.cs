@@ -18,7 +18,6 @@ namespace WarframeShawzin
         }
         public string inputStr;
         public string outputStr;
-        public int meterPerBar;//每小节几拍
         public int meterDef;//几分音符为一拍
         Data data = new Data();
         string scale;
@@ -26,19 +25,30 @@ namespace WarframeShawzin
         {
             
             inputStr = inputBox.Text;
-            meterPerBar = Convert.ToInt32(meterPerBarBox.SelectedItem);
+            
+            outputBox.Text = "";
+           
             meterDef = Convert.ToInt32(meterDefBox.SelectedItem);
-
-            ouputBox.Text = "";
+            if(meterDef<1)
+            {
+                MessageBox.Show("请选择几分音符为1拍");
+                return;
+            }
+            int scaleIndex= getScale();//从下拉框中读取音阶
+            if(scaleIndex < 0)
+            { 
+                MessageBox.Show("请选择音阶！");
+                return;
+            }
             float span = 4 / (float)meterDef;//每拍有多少秒
             float time = 0;//音符出现的时间，逐渐累加
-            getScale();//从下拉框中读取音阶
 
-            ouputBox.Text += (scaleBox.SelectedIndex + 1).ToString();
-            string[] lines = inputStr.Split('\n');
+            outputBox.Text += (scaleBox.SelectedIndex + 1).ToString();
+
+            string[] lines = inputStr.Split(new char[2] { '\n', ' ' });
             foreach (string eachLine in lines)
             {
-                for (int i = 0; i < meterPerBar; i++)
+                for (int i = 0; i < eachLine.Length; i++)
                 {
                     char note = eachLine[i];
                     if (note == '0')
@@ -47,7 +57,15 @@ namespace WarframeShawzin
                         continue;
                     }                  
                     float noteTime = time;
-                    ouputBox.Text += calcuNoteCode(note) + calcuTimeCode(noteTime);
+                    string NoteCode= calcuNoteCode(note);
+                    string TimeCode= calcuTimeCode(noteTime);
+                    if(NoteCode[0]=='4')//如果出错
+                    {
+                        outputBox.Text = "";
+                        MessageBox.Show(scaleBox.SelectedItem.ToString()+"中不包含音符"+ NoteCode[3]);                       
+                        return;
+                    }
+                    outputBox.Text += NoteCode + TimeCode;
                     time += span;
                 }
             }
@@ -64,11 +82,19 @@ namespace WarframeShawzin
         }
         private string calcuNoteCode(char note)
         {
-            int i = scale.IndexOf(note);
-            char code = data.noteCode[i];
-            return code.ToString();
+            int index;
+            try
+            {
+                index= scale.IndexOf(note);
+                char code = data.noteCode[index];
+                return code.ToString();
+            }
+            catch
+            {
+                return "404"+note;//没查到对应音符
+            }
         }
-        private void getScale()
+        private int getScale()
         {
             switch(scaleBox.SelectedIndex)
             {
@@ -84,30 +110,46 @@ namespace WarframeShawzin
                     }
                 case 2:
                     {
+                        scale = data.六式音阶;
                         break;
                     }
                 case 3:
                     {
+                        scale = data.半音;
                         break;
                     }
                 case 4:
                     {
+                        scale = data.大调;
                         break;
                     }
                 case 5:
                     {
+                        scale = data.小调;
                         break;
                     }
                 case 6:
                     {
+                        scale = data.平调子;
                         break;
                     }
                 case 7:
                     {
+                        scale = data.弗里几亚调式;
                         break;
                     }
+                default:
+                    {
+                        return -1;
+                    }
             }
+            return scaleBox.SelectedIndex;
+        }
 
+        private void ButtonHelp_Click(object sender, EventArgs e)
+        {
+            FormHelp help = new FormHelp();
+            help.Show();
         }
     }
 }

@@ -8,3 +8,4 @@ F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.csproj.Ge
 F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.csproj.CoreCompileInputs.cache
 F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.exe
 F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.pdb
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Debug\WarframeShawzin.FormHelp.resources

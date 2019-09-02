@@ -1,0 +1,11 @@
+F:\三弦琴\WarframeShawzin\WarframeShawzin\bin\Release\WarframeShawzin.exe.config
+F:\三弦琴\WarframeShawzin\WarframeShawzin\bin\Release\WarframeShawzin.exe
+F:\三弦琴\WarframeShawzin\WarframeShawzin\bin\Release\WarframeShawzin.pdb
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Release\WarframeShawzin.csprojAssemblyReference.cache
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Release\WarframeShawzin.FormHelp.resources
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Release\WarframeShawzin.Properties.Resources.resources
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Release\WarframeShawzin.warframeShawzin.resources
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Release\WarframeShawzin.csproj.GenerateResource.cache
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Release\WarframeShawzin.csproj.CoreCompileInputs.cache
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Release\WarframeShawzin.exe
+F:\三弦琴\WarframeShawzin\WarframeShawzin\obj\Release\WarframeShawzin.pdb
