@@ -279,7 +279,7 @@
             this.Controls.Add(this.outputBox);
             this.Controls.Add(this.inputBox);
             this.Name = "warframeShawzin";
-            this.Text = "Form1";
+            this.Text = "Warframe三弦琴代码转换器";
             this.ResumeLayout(false);
             this.PerformLayout();
 
